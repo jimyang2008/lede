@@ -14,6 +14,12 @@
     git config --global http.proxy $all_proxy
     git config --global https.proxy $all_proxy
 
-## enable helloworld feed
+## enable extra feeds
 
-    sed '/helloworld/ s/#//' feeds.conf.default
+```
+sed '/helloworld/ s/#//' feeds.conf.default
+cat <<EOF >> feeds.conf.default
+src-git kenzo https://github.com/kenzok8/openwrt-packages
+src-git small https://github.com/kenzok8/small
+EOF
+```
