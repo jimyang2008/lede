@@ -18,7 +18,7 @@
 
 ```
 cp feeds.conf.default{,.bak}
-sed '/helloworld/ s/#//' feeds.conf.default
+sed -i -e '/helloworld/ s/#//' feeds.conf.default
 cat <<EOF >> feeds.conf.default
 src-git kenzo https://github.com/kenzok8/openwrt-packages
 src-git small https://github.com/kenzok8/small
