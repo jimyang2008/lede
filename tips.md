@@ -1,5 +1,11 @@
 # Tips
 
+## use Tsinghua mirror for Ubuntu repo
+
+    sudo cp /etc/apt/sources.list{,.bak}
+    sudo sed -i -e s=http://archive.ubuntu.com=https://mirrors.tuna.tsinghua.edu.cn=g /etc/apt/sources.list
+    sudo sed -i -e s=http://security.ubuntu.com=https://mirrors.tuna.tsinghua.edu.cn=g /etc/apt/sources.list
+
 ## setup proxy for build
 
     proxy_ip=192.168.199.120
