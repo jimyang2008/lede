@@ -3,10 +3,11 @@
 
 rm -rf feeds
 (cd package
-  rm -rf openwrt-packages small
   # smartdns/passwall/ssrplus/...
+  rm -rf openwrt-packages
   git clone https://github.com/kenzok8/openwrt-packages.git
   # passwall dependencuy
+  rm -rf small
   git clone https://github.com/kenzok8/small.git
 
 )
