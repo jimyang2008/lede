@@ -24,3 +24,6 @@ src-git kenzo https://github.com/kenzok8/openwrt-packages
 src-git small https://github.com/kenzok8/small
 EOF
 ```
+
+## remove Docker paths in PATH
+export PATH=$(echo $PATH | sed 's/:[^:]*\(Docker\| VS \)[^:]*//g')
