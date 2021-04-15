@@ -1,5 +1,15 @@
 # Tips
 
+## install kernel headers
+
+For `apt-get install linux-headers-$(uname -r)` to work, you need to be running a kernel which is still available from the distribution repositories; in most cases, this basically means you need to be running the latest supported kernel for your distribution.
+
+On Debian, the simplest option is
+```
+apt-get update
+apt-get install linux-image-amd64 linux-headers-amd64
+```
+
 ## use Tsinghua mirror for Ubuntu repo
 
     sudo cp /etc/apt/sources.list{,.bak}
