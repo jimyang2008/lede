@@ -1,5 +1,17 @@
 # Tips
 
+## Upgrade Debian 9(stretch) to 10(buster)
+
+* replace "stretch" with "buster" in /etc/apt/sources.list
+
+      sudo sed -i -e 's/stretch/buster/g' /etc/apt/sources.list
+
+* run APT update commands
+
+      sudo apt update
+      sudo apt upgrade -y
+      sudo apt dist-upgrade -y
+
 ## install kernel headers
 
 For `apt-get install linux-headers-$(uname -r)` to work, you need to be running a kernel which is still available from the distribution repositories; in most cases, this basically means you need to be running the latest supported kernel for your distribution.
